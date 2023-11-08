@@ -13,8 +13,7 @@ import Main from './components/Main';
 function App() {
   // score
   const [score,setScore] = useState(0)
-  // sound effects and bg music
-  const [playPause,setPlayPause] = useState(true);
+  const [count,setCount] = useState(0);
   const [new_Game] = useSound(new_game)
 
   
@@ -22,9 +21,9 @@ function App() {
   return (
     <div className="App">
       <Routes>
-          <Route path='/' element={<LandingPage playPause={playPause}   new_Game={new_Game} />} />
+          <Route path='/' element={<LandingPage   new_Game={new_Game} />} />
           {/* <Route path='/game' element={<GameBoard score={score} setScore={setScore} />} /> */}
-          <Route path='/game' element={<Main score={score} setScore={setScore} playPause={playPause} setPlayPause={setPlayPause}/>} />
+          <Route path='/game' element={<Main score={score} setScore={setScore}  count={count} setCount={setCount} />} />
       </Routes>
       {/* <GameBoard score={score} setScore={setScore} /> */}
       {/* <ScoreBoard score={score}  />

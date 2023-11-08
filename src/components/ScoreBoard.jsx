@@ -7,7 +7,7 @@ import useSound from 'use-sound'
 import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 
 
-function ScoreBoard({score}) {
+function ScoreBoard({score,count}) {
 
   const [Delicious,{stop}] = useSound(delicious)
   const[Divine] = useSound(divine)
@@ -26,6 +26,7 @@ function ScoreBoard({score}) {
         <div className="score">
         <motion.div whileHover={{scale:1.01}} transition={{duration:0.3}}>
             <h1>SCORE : {score}</h1>
+            <h5 style={{textAlign:'center'}}>Turn : {count}</h5>
         </motion.div>
         </div>
     </>

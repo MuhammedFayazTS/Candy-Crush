@@ -30,7 +30,7 @@ const candys = [
 ]
 
 
-function GameBoard({score,setScore}) {
+function GameBoard({score,setScore,count,setCount}) {
     
     const [colorArrangement,setColorArrangement] = useState([])
     const [candyBeingDragged,setCandyBeingDragged] = useState(null)
@@ -38,7 +38,7 @@ function GameBoard({score,setScore}) {
    //Sound effects
     const [line_Blast] = useSound(line_blast)
     const [buttton_Press]=useSound(button_press)
-    const[Bubble] = useSound(bubble,{volume:0.15})
+    const[Bubble] = useSound(bubble,{volume:0.10})
     
     // navigate
     const Navigate = useNavigate()
@@ -161,6 +161,7 @@ function GameBoard({score,setScore}) {
             {
                 setCandyBeingDragged(null)
                 setCandyBeingReplaced(null)
+                setCount(count+1)
                 // Delicious()
                 line_Blast();
             }else{
