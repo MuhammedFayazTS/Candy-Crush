@@ -1,33 +1,51 @@
-import { useEffect, useState } from 'react';
-import './App.css';
-import GameBoard from './components/GameBoard';
-import ScoreBoard from './components/ScoreBoard';
-import Settings from './components/Settings';
+import { useContext, useEffect, useState } from 'react';
 import useSound from 'use-sound';
-import BgMusic from './audio/bgMusic.mp3'
 import { Route, Routes } from 'react-router-dom';
-import LandingPage from './components/LandingPage';
+import LandingPage from './Pages/LandingPage';
 import new_game from './audio/new_game.ogg'
-import Main from './components/Main';
+import Main from './Pages/Main';
+import BgMusic from './audio/bgMusic.mp3'
+import { musicContext } from './Context/MusicProvider';
+import useScreenSize from './Hooks/useScreenSize';
 
 function App() {
   // score
-  const [score,setScore] = useState(0)
-  const [count,setCount] = useState(0);
   const [new_Game] = useSound(new_game)
+  const { playPause, setPlayPause } = useContext(musicContext)
+  const [play, { stop, isPlaying }] = useSound(BgMusic);
+  // screen size
+  const screenSize = useScreenSize()
+  const [openWarning,setOpenWarning] = useState(true)
 
-  
+
+  useEffect(() => {
+    if (playPause) {
+      play()
+    } else {
+      stop()
+    }
+  }, [playPause])
 
   return (
     <div className="App">
-      <Routes>
-          <Route path='/' element={<LandingPage   new_Game={new_Game} />} />
-          {/* <Route path='/game' element={<GameBoard score={score} setScore={setScore} />} /> */}
-          <Route path='/game' element={<Main score={score} setScore={setScore}  count={count} setCount={setCount} />} />
-      </Routes>
-      {/* <GameBoard score={score} setScore={setScore} /> */}
-      {/* <ScoreBoard score={score}  />
-      <Settings playPause={playPause} setPlayPause={setPlayPause}/> */}
+      {
+        screenSize.width < 768 && openWarning ?
+
+          <section className=' w-full h-screen bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-amber-700 via-orange-300 to-rose-800
+        flex flex-col justify-center items-center gap-y-5'>
+            <span className='text-3xl font-semibold text-center p-5 backdrop-blur-sm bg-gray-900/10 text-gray-100'>
+              This game currently does'nt support mobile devices!!
+            </span>
+            <button onClick={()=>setOpenWarning(false)} className='btn p-3'>
+              Continue
+            </button>
+          </section>
+          :
+          <Routes>
+            <Route path='/' element={<LandingPage new_Game={new_Game} />} />
+            <Route path='/game' element={<Main />} />
+          </Routes>
+      }
     </div>
   );
 }
