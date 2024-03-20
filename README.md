@@ -10,16 +10,18 @@
     Candy Crush base game clone developed using React JS.
     <br/>
     <br/>
-    <a href="[./](https://github.com/MuhammedFayazTS/Candy-Crush.git)"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/MuhammedFayazTS/Candy-Crush.git"><strong>Explore the docs »</strong></a>
     <br/>
     <br/>
     <a href="https://candy-crush-by-fayaz.netlify.app/">View Demo</a>
     .
-    <a href="https://github.com/MuhammedFayazTS/Candy-Crush.git/issues">Report Bug</a>
+    <a href="https://github.com/MuhammedFayazTS/Candy-Crush/issues">Report Bug</a>
     .
-    <a href="https://github.com/MuhammedFayazTS/Candy-Crush.git/issues">Request Feature</a>
+    <a href="https://github.com/MuhammedFayazTS/Candy-Crush/issues">Request Feature</a>
   </p>
 </p>
+
+![Downloads](https://img.shields.io/github/downloads/MuhammedFayazTS/Candy-Crush/total) ![Contributors](https://img.shields.io/github/contributors/MuhammedFayazTS/Candy-Crush?color=purple) ![Issues](https://img.shields.io/github/issues/MuhammedFayazTS/Candy-Crush) 
 
 ## About The Project
 
