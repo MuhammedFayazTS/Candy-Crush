@@ -1,73 +1,92 @@
-Live link:-
-https://candy-crush-by-fayaz.netlify.app/
+<br/>
+<p align="center">
+  <a href="https://github.com/MuhammedFayazTS/Chat-Web-App">
+    <img src="./src/images/logo.png" alt="Logo" width="80" height="80">
+  </a>
 
-# Getting Started with Create React App
+  <h3 align="center">Candy Crush Game Clone</h3>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <p align="center">
+    Candy Crush base game clone developed using React JS.
+    <br/>
+    <br/>
+    <a href="[./](https://github.com/MuhammedFayazTS/Candy-Crush.git)"><strong>Explore the docs »</strong></a>
+    <br/>
+    <br/>
+    <a href="https://candy-crush-by-fayaz.netlify.app/">View Demo</a>
+    .
+    <a href="https://github.com/MuhammedFayazTS/Candy-Crush.git/issues">Report Bug</a>
+    .
+    <a href="https://github.com/MuhammedFayazTS/Candy-Crush.git/issues">Request Feature</a>
+  </p>
+</p>
 
-## Available Scripts
+## About The Project
 
-In the project directory, you can run:
+<div style="display: flex; justify-content: space-around; align-items: center;">
+  <img src="https://i.ibb.co/4R8hnXc/Screenshot-2024-03-20-132617.png" alt="Image 1" style="width: 300px; height: auto; margin-right: 20px;">
+  <img src="https://i.ibb.co/q97YyJV/Screenshot-2024-03-20-133602.png" alt="Image 2" style="width: 300px; height: auto; margin-right: 20px;">
+</div>
 
-### `npm start`
+# Candy Crush Clone
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This is a simple Candy Crush base game clone built with React JS, Tailwind CSS, and vanilla JavaScript for game logic.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+- **Frontend**: React JS - for building the user interface and managing component interactions.
+- **Styling**: Tailwind CSS - for applying styles quickly and responsively.
+- **Game Logic**: JavaScript - for implementing core gameplay mechanics.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Components
 
-### `npm run build`
+- **Board**: Renders the game board with a grid of squares containing candy sprites.
+- **Candy**: Individual candy component with properties like color and type.
+- **Swap**: Handles user interaction for swapping adjacent candies by drag and drop.
+- **Match Detection**: Detects horizontal and vertical lines of matching candies.
+- **Scoring**: Tracks points earned based on matches and special candy effects.
+- **Animations**: Handles animations for candy swapping, clearing lines, and cascading candies.
+- **Sound Effects**: Adds auditory feedback for game events such as matching candies or clearing lines.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Game Logic
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Swapping**: Users can swap adjacent candies.
+- **Matching**: Lines (horizontal or vertical) of three or more candies of the same color are cleared.
+- **Cascading**: Cleared candies disappear, and candies above fall down, potentially creating new matches.
+- **Scoring**: Points awarded based on the number of candies cleared.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Tailwind CSS Benefits
 
-### `npm run eject`
+- **Rapid Prototyping**: Quickly style UI elements with pre-built classes.
+- **Responsiveness**: Built-in responsive utilities for different screen sizes.
+- **Customization**: Ability to tailor styles to your specific needs.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Running the Project
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To get started with the Candy Crush clone, follow these steps:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clone the repository:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    ```bash
+    git clone https://github.com/MuhammedFayazTS/Candy-Crush.git
+    ```
 
-## Learn More
+2. Navigate into the project directory:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    ```bash
+    cd Candy-Crush
+    ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Install dependencies using npm:
 
-### Code Splitting
+    ```bash
+    npm install
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. Start the development server:
 
-### Analyzing the Bundle Size
+    ```bash
+    npm start
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This will launch the Candy Crush clone in your default web browser. Have fun playing!
